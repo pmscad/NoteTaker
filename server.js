@@ -8,7 +8,7 @@ const fs = require("fs");
 // creating an "express" server
 const app = express();
 // Sets an Initial port for listeners
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 9001;
 
 //  Initialize notesData
 
@@ -77,6 +77,7 @@ app.get("/notes", function(req, res) {
 // If no matching route is found default to home
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "Develop/public/index.html"));
+  console.log("hello!");
 });
 
 // Start the server on the port
