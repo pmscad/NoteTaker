@@ -1,6 +1,9 @@
+// need express to interact with the front end
 const express = require("express");
-const apiRoutes = require("./routes/apiRoutes");
-const htmlRoutes = require("./routes/htmlRoutes");
+// need path for filename paths
+const path = require("path");
+// need fs to read and write to files
+const fs = require("fs");
 
 // Initialize the app and create a port
 
