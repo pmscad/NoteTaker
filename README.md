@@ -1,5 +1,5 @@
 # Unit 11 Express Homework: Note Taker
-<<<<<<< HEAD
+
 =======
  https://week11-note-taker.herokuapp.com/notes
 ## Description
