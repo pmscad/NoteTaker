@@ -11,11 +11,7 @@ Create an application that can be used to write, save, and delete notes. This ap
 
 - The following HTML routes are used:
 
-  - GET `/notes` returns the `notes.html` file. ![Screen Shot of /notes path.](./Develop/public/assets/notes.png)
-
-
-       - GET /notes returns the notes.html file.
-       
+  - GET `/notes` returns the `notes.html` file. ![Screen Shot of /notes path.](./Develop/public/assets/notes.png)       
        
 
   - GET `*` returns the `index.html` file. ![Screen Shot of home page.](./Develop/public/assets/home.png)
