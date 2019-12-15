@@ -12,4 +12,3 @@
        - GET /notes returns the notes.html file.
        
        
->>>>>>> c1895aad3e56fba297a7a95378c36de5c8d2bcf5
