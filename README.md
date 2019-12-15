@@ -1,8 +1,8 @@
 # Unit 11 Express Homework: Note Taker
 
-<<<<<<< Updated upstream
+
  https://week11-note-taker.herokuapp.com/notes
-=======
+
 https://week11-note-taker.herokuapp.com/notes
 
 >>>>>>> Stashed changes
@@ -16,10 +16,10 @@ Create an application that can be used to write, save, and delete notes. This ap
 
   - GET `/notes` returns the `notes.html` file. ![Screen Shot of /notes path.](./Develop/public/assets/notes.png)
 
-<<<<<<< Updated upstream
+
        - GET /notes returns the notes.html file.
        
        
-=======
+
   - GET `*` returns the `index.html` file. ![Screen Shot of home page.](./Develop/public/assets/home.png)
->>>>>>> Stashed changes
+
