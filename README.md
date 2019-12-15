@@ -7,4 +7,4 @@
 
    *  The following HTML routes are used:
 
-       . GET /notes returns the notes.html file.
+       - GET /notes returns the notes.html file.
