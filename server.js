@@ -49,6 +49,8 @@ app.post("/api/notes", function(req, res) {
 
     // parse the data to get an array of objects
     notesData = JSON.parse(notesData);
+    // Set new notes id
+    req.body.id = notesData.length;
     // add the new note to the array of note objects
     notesData.push(req.body); // req.body - user input
     // make it string(stringify)so you can write it to the file
@@ -108,6 +110,10 @@ app.get("/notes", function(req, res) {
 // If no matching route is found default to home
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "Develop/public/index.html"));
+});
+
+app.get("/api/notes", function(req, res) {
+  return res.sendFile(path.json(__dirname, "Develop/db/db.json"));
 });
 
 // Start the server on the port
