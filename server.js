@@ -27,6 +27,7 @@ app.get("/api/notes", function(err, res) {
   try {
     // reads the notes from json file
     notesData = fs.readFileSync("Develop/db/db.json", "utf8");
+    console.log("hello!");
     // parse it so notesData is an array of objects
     notesData = JSON.parse(notesData);
 
@@ -67,19 +68,6 @@ app.post("/api/notes", function(req, res) {
   }
 });
 
-// HTML GET Requests
-
-// Web page when the Get started button is clicked
-app.get("/notes", function(req, res) {
-  res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
-});
-
-// If no matching route is found default to home
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "Develop/public/index.html"));
-  console.log("hello!");
-});
-
 // Delete a note
 
 app.delete("/api/notes/:id", function(req, res) {
@@ -95,7 +83,7 @@ app.delete("/api/notes/:id", function(req, res) {
     // make it string(stringify)so you can write it to the file
     notesData = JSON.stringify(notesData);
     // write the new notes to the file
-    fs.writeFile("./Develop/db/dbjson", notesData, "utf8", function(err) {
+    fs.writeFile("./Develop/db/db.json", notesData, "utf8", function(err) {
       // error handling
       if (err) throw err;
     });
@@ -108,6 +96,18 @@ app.delete("/api/notes/:id", function(req, res) {
     throw err;
     console.log(err);
   }
+});
+
+// HTML GET Requests
+
+// Web page when the Get started button is clicked
+app.get("/notes", function(req, res) {
+  res.sendFile(path.join(__dirname, "Develop/public/notes.html"));
+});
+
+// If no matching route is found default to home
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "Develop/public/index.html"));
 });
 
 // Start the server on the port
